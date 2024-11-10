@@ -6,12 +6,12 @@
 /* a queue contains positive integer values. */
 typedef struct Queue
 {
-	int* elements;
-	int maxSize;
-	int count;
+	unsigned int* arr;
+	unsigned int max_len;
+	unsigned int cnt;
 } Queue;
 
-Queue* initQueue(unsigned int size);
+void initQueue(Queue* q, unsigned int size);
 void cleanQueue(Queue* q);
 
 void enqueue(Queue* q, unsigned int newValue);
