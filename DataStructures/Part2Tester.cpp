@@ -1,5 +1,5 @@
 #include "Stack.h"
-//#include "Utils.h"
+#include "Utils.h"
 #include <windows.h> // WinApi header - needed for setting console color
 
 #include <iostream>'
@@ -196,7 +196,7 @@ bool test3()
 		numbers[i] = (i+1) * 2;
 	}
 
-	//reverse(numbers, 10);
+	reverse(numbers, 10);
 	std::string reversedArray = "20 18 16 14 12 10 8 6 4 2";
 	std::string resultfromReverse = arrayToString(numbers, 10);
 	cout << "Using reverse() on array and printing it... " << endl
@@ -223,10 +223,10 @@ int main()
 {
 	bool test1Result = test1();
 	bool test2Result = test2();
-	//bool test3Result = test3();
+	bool test3Result = test3();
 
 
-	if (test1Result && test2Result)// && test3Result)
+	if (test1Result && test2Result && test3Result)
 	{
 		set_console_color(GREEN);
 		std::cout << "\n########## Ex1 Part3 Tests Passed!!! ##########\n" << endl;
