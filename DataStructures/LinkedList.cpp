@@ -1,29 +1,43 @@
 #include "LinkedList.h"
 
-void addNode(Node* head, Node* newNode)
+void addNode(Node** head, Node* newNode)
 {
-	if (NULL == head)
+	Node* node = NULL;
+	if (NULL == *head)
 	{
-		head = newNode;
+		*head = newNode;
 	}
 	else
-	{
-		while (NULL == head->nextNode)
+	{	
+		node = *head;
+		while (NULL != node->nextNode)
 		{
-			head = head->nextNode;
+			node = node->nextNode;
 		}
-		head->nextNode = newNode;
+		node->nextNode = newNode;
 	}
 }
 
-void removeNode(Node* head)
+int removeNode(Node** head)
 {
-	if (NULL != head)
+	int returnValue = -1;
+	Node* node = *head;
+
+	if (NULL != *head && NULL == node->nextNode)
 	{
-		while (NULL == head->nextNode)
-		{
-			head = head->nextNode;
-		}
-		head = NULL;
+		returnValue = node->value;
+		delete node;
+		*head = NULL;
 	}
+	else if (NULL != *head)
+	{
+		while (NULL != node->nextNode->nextNode)
+		{
+			node = node->nextNode;
+		}
+		returnValue = node->nextNode->value;
+		delete node->nextNode;
+		node->nextNode = NULL;
+	}
+	return returnValue;
 }

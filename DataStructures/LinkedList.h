@@ -6,10 +6,11 @@
 typedef struct Node
 {
 	struct Node* nextNode;
+	unsigned int value;
 } Node;
 
-void addNode(Node* head, Node* newNode);
+void addNode(Node** head, Node* newNode);
 
-void removeNode(Node* head);
+int removeNode(Node** head);
 
 #endif /* LINKED_LIST */

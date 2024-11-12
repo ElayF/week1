@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{52ece2b8-d4eb-4667-85c3-801cd291da94}</ProjectGuid>
-    <RootNamespace>DataStructures</RootNamespace>
+    <ProjectGuid>{ea598139-85cf-4af4-807a-7cd798c01532}</ProjectGuid>
+    <RootNamespace>Stack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\1\Part1Tester.cpp" />
-    <ClCompile Include="main1.cpp" />
-    <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="..\DataStructures\LinkedList.cpp" />
+    <ClCompile Include="..\DataStructures\main2.cpp" />
+    <ClCompile Include="..\DataStructures\Part2Tester.cpp" />
+    <ClCompile Include="..\DataStructures\Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Queue.h" />
+    <ClInclude Include="..\DataStructures\LinkedList.h" />
+    <ClInclude Include="..\DataStructures\Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

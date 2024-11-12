@@ -9,7 +9,8 @@ void initQueue(Queue* q, unsigned int size)
 
 void cleanQueue(Queue* q)
 {
-	q-> arr = NULL;
+	delete q->arr;
+	q->arr = NULL;
 }
 
 void enqueue(Queue* q, unsigned int newValue)
