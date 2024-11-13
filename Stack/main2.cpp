@@ -9,5 +9,9 @@ int main()
 	node1->nextNode = node2;
 	node2->nextNode = node3;
 	
+	delete node1;
+	delete node2;
+	delete node3;
+
 	return 0;
 }
